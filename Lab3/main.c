@@ -22,7 +22,6 @@ int main(void){
 	
 	// Also we always have A1 as active output
 	// Part using structures
-	char chars[] = {'.','_',' ','_','.',' ','.','_',' ','_',' ','_','_','_',' ','.','_','.','.',' ','.','.',' ','.','.'};
 	char katusha[] = {'_','.','_',' ','.','_',' ','_',' ','.',' ','.','_','.',' ','_','.','_','_',' ','_','.',' ','.','_'};
 	int length = sizeof(katusha) / sizeof(char);
 		
@@ -33,7 +32,7 @@ int main(void){
 	GPIOB->CRH = 0x3; // open port B8
 		
 	GPIOC->CRH = 0x100000; // open port C13 
-	GPIOC->ODR = 0x2000; // Turn lamp off C13
+	GPIOC->ODR = 0x2000; // Turn diod off C13
 		
 	GPIOA->CRL = 0x11; // Open A1, A0
 	GPIOA->ODR = 0x2; // Turn on A1 as output
